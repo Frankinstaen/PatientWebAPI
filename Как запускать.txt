@@ -1,9 +1,18 @@
-1. выгрузить образы
+1. выгрузить образы введя команды в терминале
 docker pull mcr.microsoft.com/mssql/server
 docker pull frankinstaen/seeddata
 docker pull frankinstaen/patientwebapi
+
 2. запустить команды в терминале
 1)docker network create -d bridge xyz-network
 2)docker run --name sql_server -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=MyPass@word' -p 1433:1433 --network=xyz-network mcr.microsoft.com/mssql/server
 3)docker run --name web_api_application -p 5141:80 --network=xyz-network frankinstaen/patientwebapi
 4)docker run --network=xyz-network --name=seed frankinstaen/seeddata
+
+3. запустить контейнеры в порядке (если не были запущены):
+1)sql_server
+2)web_api_application
+3)seed (один раз (опционально), заполнит бд данными)
+
+4. перейти по закрепленной ссылке в README на коллекцию в Postman,
+ выполнить Fork и запустить коллекцию локально (обязательно) выбрав Enviroment.

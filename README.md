@@ -1,0 +1,1 @@
+link to Postman collection:https://www.postman.com/frankinstaen/workspace/patientwebapi/collection/21486425-733b7dd2-bf51-4d8f-9397-22db55d29baf?action=share&creator=21486425&active-environment=21486425-78e6d81f-ecd9-4d71-9aae-761eb254aecb
